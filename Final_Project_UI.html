@@ -1,0 +1,279 @@
+<index.html>
+
+  <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <title>MERA</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+        <style>
+
+          /* CSS */
+            :root{
+              --nav-bg:#b3aca0;
+              --page-bg:#e5e3dc;
+              --ink:#2d1b1b;
+              --placeholder:#cfc9bd;
+              --font-display:'Playfair Display',Georgia,serif;
+              --font-body:'Syne',Arial,sans-serif;
+            }
+
+        
+            *{margin:0;padding:0;box-sizing:border-box}
+            html{scroll-behavior:smooth}
+        
+            body{background:var(--page-bg);color:var(--ink);font-family:var(--font-body);overflow-x:hidden}
+        
+            a{color:inherit;text-decoration:none}
+        
+            img{display:block;width:100%;height:100%;object-fit:cover;background:var(--placeholder);font-size:12px}
+
+          /* NAVIGATION */
+            nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);height:clamp(60px,9.5vw,132px);
+              display:flex;align-items:center;padding:0 2.2vw}
+         
+            .brand{display:flex;align-items:center;gap:1.1vw;width:25vw}
+        
+            .logo{width:clamp(36px,5.8vw,82px);aspect-ratio:1;border-radius:50%;background:#000;overflow:hidden;
+              display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7vw}
+            .logo img{background:#000;object-fit:contain}
+        
+            .wordmark{font-weight:800;font-size:clamp(20px,3.3vw,46px);letter-spacing:.02em}
+        
+            .links{display:flex;gap:3.2vw;font-weight:700;font-size:clamp(10px,1.2vw,17px);color:#3a3a3a;margin-left:5vw}
+            .links a{display:flex;flex-direction:column;align-items:center}
+            .links svg{width:1.3vw;min-width:10px;margin-top:.2vw}
+        
+            .icons{margin-left:auto;margin-right:6vw;display:flex;align-items:center;gap:1.8vw}
+            .icons svg{width:clamp(16px,1.8vw,26px);fill:none;stroke:#333;stroke-width:1.6}
+        
+            .burger{background:var(--ink);width:clamp(28px,3.1vw,43px);aspect-ratio:1.15;border-radius:6px;display:grid;place-items:center}
+            .burger svg{stroke:#fff;width:60%}
+
+          /* SECTION BASE */
+            .sec{position:relative;width:100%;aspect-ratio:1389/736;container-type:inline-size;overflow:hidden}
+        
+            .abs{position:absolute;overflow:hidden}
+        
+            .h{font-family:var(--font-display);line-height:1.05}
+            .h i{font-weight:400}
+            .h b{font-weight:900}
+        
+            .offer{position:absolute;text-align:center;font-size:1.5cqw;line-height:1.15}
+        
+            .arrow{position:absolute;width:5cqw;aspect-ratio:1}
+            .arrow svg{width:100%;fill:none;stroke:var(--ink);stroke-width:3.5}
+
+          /* HERO */
+            .hero-title{left:40.3%;top:6.5%;font-size:5.4cqw;z-index:5;white-space:nowrap}
+            .hero-title span{display:block}
+            .hero-title .l1{padding-left:3.5cqw}.hero-title .l2{padding-left:0}
+        
+            .tag{left:14%;top:14.7%;width:10%;font-size:1.55cqw;line-height:1.15}
+
+          /* ABOUT */
+            .about-title{left:20.7%;top:17.5%;font-size:4.4cqw}
+            .about-body{left:24.1%;top:31.5%;width:54.4%;font-size:1.8cqw;line-height:1.38;text-align:justify;text-indent:4.5cqw}
+
+          /* CAROUSEL */
+            .ring{left:28%;top:3.4%;width:47.5%;aspect-ratio:1;border:1px solid #ccc9c0;border-radius:50%}
+        
+            .vline{left:51.8%;top:0;height:100%;border-left:1px solid #ccc9c0;position:absolute}
+        
+            .hline{top:52.3%;left:0;width:98%;border-top:1px solid #ccc9c0;position:absolute}
+        
+            .ptitle{left:2.2%;top:3%;font-size:3.3cqw}
+
+          /* PRODUCT */
+            .pname{text-align:center;font-size:1.55cqw;line-height:1.15}
+        
+            .pdesc{font-size:1.45cqw;line-height:1.15;margin-top:.8cqw;text-align:left}
+        
+            .ptext{position:absolute}
+
+          @media(max-width:700px){.links,.icons .s{display:none}.icons{margin-right:2vw}}
+            .ptitle2{left:27%;top:3.1%;width:42%;text-align:center;font-size:4.3cqw;overflow:visible}
+        
+            .pname.l{text-align:left}.pname.r{text-align:right}
+        
+            .pdesc.r{text-align:right}
+        
+            .pname{font-size:1.65cqw}.pdesc{font-size:1.65cqw;line-height:1.15}
+        
+            .grid{display:grid;grid-template-columns:repeat(3,21.7%);justify-content:space-between;padding:7.3cqw 6.2cqw 6cqw;row-gap:5cqw;aspect-ratio:auto}
+            .grid .card{text-align:center}
+            .grid .card .im{aspect-ratio:302/381;overflow:hidden;margin-bottom:1.4cqw}
+            .grid .pname{text-align:center}.grid .pdesc{text-align:center;margin-top:1.8cqw}
+          
+            .contacts{background:var(--nav-bg);container-type:inline-size;padding:4cqw 3cqw 5cqw;margin-top:4cqw}
+            .contacts h2{font-family:var(--font-display);font-size:4.2cqw;line-height:1;margin-bottom:2.6cqw}
+            .contacts h2 b{font-weight:900;font-style:italic}.contacts h2 i{font-weight:400}
+            .contacts ul{list-style:none;display:flex;flex-direction:column;align-items:center;gap:1.2cqw}
+            .contacts li{font-size:2.3cqw;line-height:1.2;text-align:center}
+            .contacts li strong{font-weight:800;text-transform:uppercase;margin-right:.9cqw}
+            .contacts li a:hover{text-decoration:underline}
+        </style>
+      </head>
+
+      <body>
+
+        <!--NAVIGATION-->
+        <nav>
+          <!--BRAND-->
+          <a class="brand" href="#home">
+            <div class="logo"><img src=https://i.ibb.co/gZv7xVps/logo.jpg alt="MERA"></div>
+            <span class="wordmark">MERA</span>
+          </a>
+
+          <!--LINKS-->
+          <div class="links">
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contacts</a>
+          </div>
+  
+          <!--ICONS-->
+          <div class="icons">
+            <svg class="s" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="M16 16l6 6"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M2 4h3l3 12h11l2-8H7M9 20h.1M18 20h.1"/></svg>
+            <div class="burger"><svg viewBox="0 0 24 16" fill="none" stroke-width="2"><path d="M1 2h22M1 8h22M1 14h22"/></svg></div>
+          </div>
+        </nav>
+
+        <!--INTRODUCTION-->
+        <section class="sec" id="home">
+          <!--TEXTS-->
+          <p class="abs tag" style="overflow:visible">Our latest collection of clothes this year.</p>
+          <h1 class="abs h hero-title" style="overflow:visible">
+            <span class="l1"><i>Basic</i> <b>and</b></span>
+            <span class="l2"><b>Classy</b> <i>for</i></span>
+            <span><i>Every</i> <b>Woman.</b></span>
+          </h1>
+
+          <!--IMAGES-->
+          <div class="abs" style="left:14%;top:37.4%;width:13.1%;height:29.6%"><img src="https://i.ibb.co/pvP6HLJc/Dofoto-20261029-192842195ba38d6efc7ef47ca8183969969a293e3.png" alt=""></div>
+          <div class="abs" style="left:6.2%;top:69.3%;width:27.5%;height:27.6%"><img src="https://i.ibb.co/pj5hCLGT/Dofoto-20261029-192927525d4f83dbdce28e6015b278bcef0a32632.png" alt=""></div>
+          <div class="abs" style="left:29.2%;top:30.8%;width:21.5%;height:69.2%"><img src="https://i.ibb.co/35Z1DhhD/Dofoto-20261029-192738843262bb2bcccd467e813133d07fd68752b.png" alt=""></div>
+          <div class="abs" style="left:51.6%;top:45.6%;width:21.6%;height:54.4%"><img src="https://i.ibb.co/RTq54JfC/Dofoto-20261029-193120046ba42a921facfbf32f1d594063e0db1ea.png" alt=""></div>
+          <div class="abs" style="left:70.9%;top:59.5%;width:22.9%;height:31.8%;z-index:2"><img src="https://i.ibb.co/cSXCJSFT/Dofoto-20261029-1922338883c17c1c414c7066141a1b86678fe0890.png" alt=""></div>
+
+          <!--TEXTS-->
+          <p class="offer" style="left:80.5%;top:30.3%;width:15%">Get attractive offers for your first purchase.</p>
+          <div class="arrow" style="left:85.2%;top:43.5%"><svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="22"/><path d="M25 12v24M14 26l11 11 11-11"/></svg></div>
+        </section>
+
+        <!--ABOUT US-->
+        <section class="sec" id="about">
+          <!--IMAGES-->
+          <div class="abs" style="left:0;top:3.3%;width:17.1%;height:27.6%"><img src="https://i.ibb.co/RGgdkkKx/Dofoto-20261029-1923122359dbb6d2e040d64d413608f2e907e9807.png" alt=""></div>
+          <div class="abs" style="left:0;top:34%;width:17.1%;height:66%"><img src="https://i.ibb.co/PsV2yNp4/Dofoto-20261029-1924008323f7e9b9e5e8b76630a624573e228082d.png" alt=""></div>
+          <div class="abs" style="left:86.7%;top:2.4%;width:13.3%;height:56.5%"><img src="https://i.ibb.co/h1trgtTQ/Dofoto-20261029-1925158422b53a9d8d97b726f10a3cc8d72f4118c.png" alt=""></div>
+          <div class="abs" style="left:90.7%;top:34%;width:9.3%;height:29.6%;z-index:2"><img src="https://i.ibb.co/b5HPwhDD/Dofoto-20261029-19263685148ec52bcd9c1c95c18521336bac0e6b1.png" alt=""></div>
+          <div class="abs" style="left:82.3%;top:66.3%;width:17.7%;height:31.6%"><img src="https://i.ibb.co/23b6RMv3/Dofoto-20261029-19305070573a894ab7731bb64232e9d89d7b13211.png" alt=""></div>
+
+          <!--TITLE AND DESCRIPTION-->
+          <h2 class="abs h about-title" style="overflow:visible"><i>About</i> <b>Us..</b></h2>
+          <p class="abs about-body" style="overflow:visible">
+            MERA (often known by its social handles like @shopatmera on TikTok and Instagram) is a rapidly growing Filipino fashion and lifestyle brand that specializes in elevated everyday essentials and high-quality minimalist pieces. Founded by local entrepreneur Katty Mera Tilao-Bach, the brand has captured a massive following among young adults for its focus on modern, body-flattering silhouettes that balance current trends with timeless wearability.
+          </p>
+        </section>
+
+        <!-- PRODUCTS SET 1-->
+        <section class="sec" id="products">
+          <!--TITLE-->
+          <h2 class="abs h ptitle2"><b>Products</b> <i>and their</i> <b>Prices..</b></h2>
+
+          <!--IMAGE-->
+          <div class="abs" style="left:8%;top:21.2%;width:30.8%;height:62.8%"><img src="https://i.ibb.co/G3FxW8Qh/RENATA.jpg" alt="MERA Renata"></div>
+          <!--TEXT-->
+          <div class="ptext" style="left:41.6%;top:21.9%;width:18%">
+            <div class="pname l"><b>MERA Renata<br>₱164.00</b></div>
+            <p class="pdesc" style="padding-left:.3cqw">This tee is double lined, crafted to comfortably compress and provides support as a fave t-shirt. The high neckline and short sleeves, create a clean and minimal style, allowing to be paired with any piece.</p>
+          </div>
+
+          <!--TEXT-->
+            <div class="ptext" style="left:53.4%;top:59.4%;width:17.2%">
+            <div class="pname r"><b>MERA Arya Tank Top<br>₱269.00</b></div>
+            <p class="pdesc r">Full-length top with thick supportive straps and a square neckline. This wardrobe essential was designed to have the perfect stretch, giving you an hourglass effect when worn.</p>
+          </div>
+          <!--IMAGE-->
+          <div class="abs" style="left:72.5%;top:49.5%;width:21.9%;height:44.7%"><img src="https://i.ibb.co/YB2001Kk/ARYA.jpg" alt="MERA Arya Tank Top"></div>
+          </section>
+
+        <!-- PRODUCTS SET 2 -->
+        <section class="sec" id="styleboard">
+          <!--IMAGE-->
+          <div class="abs" style="left:6.2%;top:18.1%;width:30.8%;height:62.9%"><img src="https://i.ibb.co/MkM1C6jW/VERA.jpg" alt="MERA Vera Tube"></div>
+          <!--TEXT-->
+          <div class="ptext" style="left:51.8%;top:19.3%;width:18.4%">
+            <div class="pname r"><b>MERA Linda<br>₱250.00</b></div>
+            <p class="pdesc r">A sleek high-neck tank with a fitted silhouette that makes a simple look feel instantly put together. Your go-to when you want effortless but polished.</p>
+          </div>
+
+          <!--IMAGE-->
+          <div class="abs" style="left:71.9%;top:19.3%;width:21.8%;height:44.7%"><img src="https://i.ibb.co/7dTB1VJp/LINDA.jpg" alt="MERA Linda"></div>
+          <!--TEXT-->
+          <div class="ptext" style="left:39%;top:50.7%;width:19.5%">
+            <div class="pname l"><b>MERA Vera Tube<br>₱149.00</b></div>
+             <p class="pdesc">The Vera Full-Length Tube Top is the extended version of our loved crop tube top, designed with a sleek full-length silhouette and soft stretch fabric for a smooth, flattering fit.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCTS SET 3 -->
+        <section class="sec" id="collection">
+          <!--TEXT-->
+          <div class="ptext" style="left:41.7%;top:11%;width:22.2%">
+            <div class="pname r"><b>MERA Liza<br>₱1,135.00</b></div>
+            <p class="pdesc r">The Liza Body sculpt Top hugs your curves with our signature smoothing fabric, creating a snatched silhouette that feels as good as it looks. Engineered to push, lift, and contour in all the right places, it's the effortless essential that makes you feel confident, supported, and undeniably sexy.</p>
+            </div>
+          </div>
+          <!--IMAGE-->
+          <div class="abs" style="left:65.5%;top:11%;width:28%;height:62.9%"><img src="https://i.ibb.co/7szMS0F/LIZA.jpg" alt="MERA Liza"></div>
+          <!--IMAGE-->
+          <div class="abs" style="left:6.6%;top:45.8%;width:21.9%;height:44.6%"><img src="https://i.ibb.co/SDLFt0G0/ODRIA.jpg" alt="MERA Odria"></div>
+          <!--TEXT-->
+          <div class="ptext" style="left:29.9%;top:56.1%;width:21%">
+            <div class="pname l"><b>MERA Odria<br>₱282.00</b></div>
+              <p class="pdesc">Meet Odria an updated version of our Olga top, now with long sleeves and thumbholes for extra comfort. Soft, stretchy fabric hugs the body for a smooth, flattering fit, with a clean, minimal look perfect for everyday wear.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCT GRID -->
+        <section class="sec grid" id="contact">
+          <!--IMAGE-->
+          <div class="card"><div class="im"><img src="https://i.ibb.co/wNRmfQpg/PREM-ALEXA.jpg" alt="MERA Premium Alexa"></div>
+          <!--TEXT-->
+          <div class="pname"><b>MERA Premium Alexa<br>₱270.00</b></div>
+          <p class="pdesc">Your go-to Alexa, now elevated with a premium touch and a sleeker, more polished finish.</p></div>
+
+          <!--IMAGE-->
+          <div class="card"><div class="im"><img src="https://i.ibb.co/Mxm1bZ3b/ALANA.jpg" alt="MERA Alana"></div>
+          <!--TEXT-->
+          <div class="pname"><b>MERA Alana<br>₱249.00</b></div>
+          <p class="pdesc">Meet the Alana Top — the flirty staple that hugs right and feels even better.</p></div>
+
+          <!--IMAGE-->
+          <div class="card"><div class="im"><img src="https://i.ibb.co/3tv9qZ6/VITTORIA.jpg" alt="MERA Vittoria"></div>
+          <!--TEXT-->
+          <div class="pname"><b>MERA Vittoria<br>₱240.00</b></div>
+          <p class="pdesc">A fitted V-neck tee that keeps things simple, feminine, and flattering. An elevated take on the everyday basic.</p></div>
+        </section>
+        
+        <!-- CONTACTS & SOCIALS -->
+        <footer class="contacts" id="contact">
+          <h2><b>Contacts</b> <i>and</i> <b>Socials</b></h2>
+          <ul>
+            <li><strong>Shopee:</strong> <a href="https://shopee.ph/mera.official">shopee.ph/mera.official</a></li>
+            <li><strong>TikTok Shop:</strong> <a href="https://www.tiktok.com/@shopatmera">www.tiktok.com/@shopatmera</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/shopatmera/">instagram.com/shopatmera/</a></li>
+            <li><strong>Threads:</strong> <a href="https://threads.com/@shopatmera">threads.com/@shopatmera</a></li>
+          </ul>
+        </footer>
+
+      </body>
+    </html>
+</index.html>
